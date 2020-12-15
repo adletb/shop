@@ -1,3 +1,57 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  
+  <ion-menu menuId="main-menu" content-id="main" type="push">
+    <ion-header class="ion-no-border">
+      <ion-toolbar color="main">
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-no-border" color="main">
+      <ion-list>
+        <ion-item lines="none">
+          <ion-avatar>
+            <img src="../assets/icon/avatar.png">
+          </ion-avatar>          
+          <ion-label>
+            <h3>Johnathan Villarreal</h3>
+            <p>+7 747 999 99 47</p>
+          </ion-label>      
+        </ion-item>
+        <ion-item class="button" lines="none">
+          <ion-icon name="location-outline" color="light"></ion-icon>
+          <ion-label>Nur-Sultan</ion-label>
+        </ion-item>
+        <ion-item routerLink="home">
+          <ion-icon name="home-outline" color="light"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="cart-outline" color="light"></ion-icon>
+          <ion-label>Cart</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bag-outline" color="light"></ion-icon>
+          <ion-label>My order</ion-label>
+        </ion-item>
+        <ion-item>
+          <h3>%</h3>
+          <ion-label>Sale</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="star-outline" color="light"></ion-icon>
+          <ion-label>Recommendations</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="settings-outline" color="light"></ion-icon>
+          <ion-label>Setting</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="exit-outline" color="light"></ion-icon>
+          <ion-label>Exit</ion-label>
+        </ion-item>          
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

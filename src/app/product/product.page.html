@@ -1,0 +1,54 @@
+<ion-content>
+
+  <div slot="fixed" class="fix">
+    <h1>LOGO</h1>
+  </div>
+
+  <ion-back-button slot="fixed" text="" defaultHref="/one-shop">    
+  </ion-back-button>
+
+<ion-toolbar class="header">
+  
+</ion-toolbar>
+
+ <ion-slides [options]="product" pager="true" class="slide ion-margin-bottm" >
+    <ion-slide>
+       <img src="../../assets/page/shop/product.png">      
+    </ion-slide>    
+    <ion-slide>
+       <img src="../../assets/page/shop/product.png">      
+    </ion-slide>    
+    <ion-slide>
+       <img src="../../assets/page/shop/product.png">      
+    </ion-slide>    
+  </ion-slides>
+
+    <ion-footer class="ion-no-border">
+      <ion-card>      
+        <ion-card-header>
+          <ion-card-title>Samsung Galaxy S20 FE</ion-card-title>
+          <ion-card-subtitle>128GB</ion-card-subtitle>
+          <ion-card-title class="price">$647</ion-card-title>          
+        </ion-card-header>
+
+        <ion-card-content class="content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
+        </ion-card-content> 
+        
+        <ion-card-content>
+          <ion-toolbar>
+            <ion-button class="round" slot="start" fill="solid" color="main">
+              <ion-icon name="cart-outline"></ion-icon>
+            </ion-button>     
+                       
+            <ion-button  slot="end" fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>              
+            </ion-button>
+          </ion-toolbar>
+        </ion-card-content> 
+      </ion-card> 
+
+    </ion-footer>
+
+   
+  </ion-content>

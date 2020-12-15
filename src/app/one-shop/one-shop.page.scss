@@ -1,0 +1,134 @@
+ion-content {
+
+    ion-toolbar {
+            padding: 10px 15px;
+    }   
+
+    .header {
+        height: 75px; 
+        ion-icon {
+            color: black;
+        }
+    }  
+
+    ion-back-button {
+        top: 20px;
+        left: 30px;
+        color: black;
+    }
+
+    .logo {
+        left: 150px;
+        h1 {
+            text-align: center;
+            color: #00D173;
+            font-size: 28px;
+            font-style: bould;
+            font-weight: 900;
+            font-family: Inter;
+        }
+    }
+
+    .plus{
+        left: 170px;
+        top: 90%;     
+        width: 50px;
+        height: 50px;
+        --border-radius: 50px;   
+    }
+    
+    .badge {
+        opacity: 0;
+        border: 1px solid #00D173;
+        background: white;
+        color: #00d173;
+        top: 92%;
+        left: 30px;
+    }
+
+    ion-item {      
+       padding-left: 0px;        
+       h3 {
+            font-weight: 500;
+            font-size: 14px;
+        }    
+       p {
+          font-weight: 400;
+          font-size: 10px;
+       }         
+        img {
+            width: 74px;;
+            height: 74px;
+            padding-right: 5px ;
+        }   
+    } 
+    .paragraph {
+        padding: 0 16px;   
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            color: #002F1A;
+        }
+    }    
+   .buttons {        
+        padding: 0 15px;       
+        ion-button {
+            width: 50px;
+            height: 50px;
+            --border-radius: 10px;
+            --border-width: 1px;                                    
+            }  
+        .deliver {
+            border: solid 1px #D9E0DD;
+            border-radius: 10px;  
+            margin-right: 2.5px;      
+        }  
+    }
+
+    ion-grid {  
+
+        ion-col {
+            position: relative;
+            .favourite  {
+                position: absolute;
+                top: 30px;
+                left: 20px;
+            }    
+        }
+        
+        ion-card{
+            box-shadow:none;
+            margin-bottom: 0;
+        }
+        ion-title{
+            padding-left: 0px; 
+
+            .title {
+                display: block;
+            }
+            ion-label{
+                padding-left: 0px;
+            }            
+            h6 {
+                font-size: 10px;
+                font-weight: 400;
+                text-transform: none;                
+            }
+            p {
+                font-size: 10px;
+                font-weight: 500; 
+            }
+        }  
+
+        h5 {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+                
+    }
+
+    
+
+}

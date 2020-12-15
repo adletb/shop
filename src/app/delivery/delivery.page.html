@@ -1,0 +1,120 @@
+<ion-header class="ion-no-border">
+
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>     
+      </ion-buttons>
+    </ion-buttons>
+    <h1>LOGO</h1>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>  
+  
+  <ion-toolbar>
+    <ion-slides pager="true" [options]="drink">
+      <ion-slide>
+        <img src="../../assets/page/home/mango.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/page/home/mango.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/page/home/mango.png">
+      </ion-slide>
+    </ion-slides>
+  
+    <ion-slides [options]="category">
+      <ion-slide> <h6>Food</h6> </ion-slide>
+      <ion-slide> <h6>Clothes</h6> </ion-slide>
+      <ion-slide> <h6>Electronics</h6> </ion-slide>
+      <ion-slide> <h6>House</h6> </ion-slide>
+      <ion-slide> <h6>Transport</h6> </ion-slide>
+      <ion-slide> <h6>Games</h6> </ion-slide>
+      <ion-slide> <h6>Sport</h6> </ion-slide>
+    </ion-slides>
+  </ion-toolbar> 
+
+  <ion-toolbar class="buttons">
+    <ion-buttons slot="start">
+      <div class="deliver">
+        <ion-button >
+            <img src="../../assets/icon/motocycle.svg">
+        </ion-button>
+        <ion-button>
+          <img src="../../assets/icon/delivery.svg">
+        </ion-button>
+      </div>
+        
+      <ion-button fill="outline" color="button">
+        <img src="../../assets/icon/celender.svg">
+      </ion-button>
+      <ion-button fill="outline" color="button"> 
+        <img src="../../assets/icon/map.svg">
+      </ion-button>
+    </ion-buttons >
+
+    <ion-buttons slot="end">
+      <ion-button fill="outline" color="button">
+        <img src="../../assets/icon/tiletype.svg">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col class="catalog">
+        <ion-card routerLink="/one-shop">
+          <img src="../../assets/page/home/e-katalog.png">
+          <ion-card-header>
+            <ion-card-title>e-katalog</ion-card-title>
+            <ion-card-subtitle >The Walt Disney Company</ion-card-subtitle>
+            <ion-card-subtitle class="price">₸₸₸ • 45min. • ★7.5</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+        <img  class="favourite" src={{Arr[0].icon}} (click)="select(Arr[0])">
+      </ion-col>
+      <ion-col>
+        <ion-card ro>
+          <img src="../../assets/page/home/xiaomi.png">
+          <ion-card-header>
+            <ion-card-title>Xiaomi</ion-card-title>
+            <ion-card-subtitle class="subtitle">Louis Vuitton</ion-card-subtitle>
+            <ion-card-subtitle class="price">₸₸₸ • 45min. • ★7.5</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+        <img  class="favourite" src={{Arr[1].icon}} (click)="select(Arr[1])">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/home/logo.png">
+          <ion-card-header>
+            <ion-card-title>KFC</ion-card-title>
+            <ion-card-subtitle class="subtitle">Fast Food</ion-card-subtitle>
+            <ion-card-subtitle class="price">₸₸₸ • 45min. • ★7.5</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+        <img  class="favourite" src={{Arr[2].icon}} (click)="select(Arr[2])">
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/home/logo.png">
+          <ion-card-header>
+            <ion-card-title>Burger king</ion-card-title>
+            <ion-card-subtitle class="subtitle">Fast Food</ion-card-subtitle>
+            <ion-card-subtitle class="price">₸₸₸ • 45min. • ★7.5</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+        <img  class="favourite" src={{Arr[3].icon}} (click)="select(Arr[3])">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

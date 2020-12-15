@@ -1,20 +1,160 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>     
+    </ion-buttons>
+    <h1>LOGO</h1>
+    <ion-buttons slot="end" >
+      <ion-button (click)="play()">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>  
 </ion-header>
+  
+<ion-content>
+  
+  <ion-slides pager="true">
+    <ion-slide>
+      <img src="../../assets/page/home/mango.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/page/home/mango.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/page/home/mango.png">
+    </ion-slide>
+  </ion-slides>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-slides [options]="categories">
+    <ion-slide>
+      <h6>Food</h6>
+    </ion-slide>
+    <ion-slide>
+      <h6>Clothes</h6>
+    </ion-slide>
+    <ion-slide>
+      <h6>Electronics</h6>
+    </ion-slide>
+    <ion-slide>
+      <h6>House</h6>
+    </ion-slide>
+    <ion-slide>
+      <h6>Transport</h6>
+    </ion-slide>
+    <ion-slide>
+      <h6>Games</h6>
+    </ion-slide>
+    <ion-slide>
+      <h6>Sport</h6>
+    </ion-slide>
+  </ion-slides>
+    <div class="slides">
+      <h3>Recommendations to you</h3>
+      <ion-slides [options] = "recommend">
+        <ion-slide>                        
+          <ion-card routerLink='/delivery'>                          
+            <img src="../../assets/page/home/divan.png">           
+            <ion-card-header>
+              <ion-card-title>Divan</ion-card-title>
+              <ion-card-subtitle>Rstaurant</ion-card-subtitle>
+              <ion-card-subtitle class="price">от 2500₸</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>       
+          <img  class="favourite" src={{recomendArr[0].icon}}  (click)="select(recomendArr[0])">                   
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="../../assets/page/home/rafe.png">
+            <ion-card-header>
+              <ion-card-title>Rafe</ion-card-title>
+              <ion-card-subtitle>Rstaurant</ion-card-subtitle>
+              <ion-card-subtitle class="price">от 2500₸</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+          <img  class="favourite" src={{recomendArr[1].icon}} (click)="select(recomendArr[1])">
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="../../assets/page/home/divan.png">
+            <ion-card-header>
+              <ion-card-title>Capitol juice</ion-card-title>
+              <ion-card-subtitle>Rstaurant</ion-card-subtitle>
+              <ion-card-subtitle class="price">от 2500₸</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+          <img  class="favourite" src={{recomendArr[2].icon}} (click)="select(recomendArr[2])">
+        </ion-slide>
+      </ion-slides>
+    
+      <h3>Promotions for you</h3>
+      <ion-slides [options] = "promotions">
+        <ion-slide>   
+          <ion-card>   
+            <img src="../../assets/page/home/orange.png">
+            <ion-card-header>
+              <ion-card-title class="text">Orange juice</ion-card-title>
+              <ion-card-subtitle class="text">1.5 liters</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>    
+          <ion-card>
+            <img src="../../assets/page/home/ipoint.png">
+            <ion-card-header>
+              <ion-card-title class="text">Ipoint</ion-card-title>
+              <ion-card-subtitle class="text">Buy 1 case, get 2 as a gift</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>    
+          <ion-card>
+            <img src="../../assets/page/home/orange.png">
+            <ion-card-header>
+              <ion-card-title class="text">Jack Wolfskin</ion-card-title>
+              <ion-card-subtitle class="text">Buy 1 case, get 2 as a gift</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+        
+      </ion-slides>
+    
+      <h3>New stores in Cloio</h3>
+      <ion-slides [options] = "store">
+        <ion-slide>    
+          <ion-card>
+            <img src="../../assets/page/home/rafe.png">
+            <ion-card-header>
+              <ion-card-title>LC Waikiki</ion-card-title>
+              <ion-card-subtitle>Clothing store</ion-card-subtitle>
+              <ion-card-subtitle class="price">₸₸₸ • 45min. • ★7.5</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+          <img  class="favourite" src={{newArr[0].icon}} (click)="select(newArr[0])">
+        </ion-slide>
+        <ion-slide>    
+          <ion-card>
+            <img src="../../assets/page/home/divan.png">
+            <ion-card-header>
+              <ion-card-title>Intertop</ion-card-title>
+              <ion-card-subtitle>Shoe store</ion-card-subtitle>
+              <ion-card-subtitle class="price">₸₸₸ • 45min. • ★7.5</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+          <img  class="favourite" src={{newArr[1].icon}} (click)="select(newArr[1])">
+        </ion-slide>
+        <ion-slide>    
+          <ion-card>
+            <img src="../../assets/page/home/rafe.png">
+            <ion-card-header>
+              <ion-card-title>Teslaservice</ion-card-title>
+              <ion-card-subtitle>Spare parts store</ion-card-subtitle>
+              <ion-card-subtitle class="price">₸₸₸ • 45min. • ★7.5</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+          <img  class="favourite" src={{newArr[2].icon}} (click)="select(newArr[2])">
+        </ion-slide>        
+      </ion-slides>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>

@@ -1,0 +1,235 @@
+<ion-content>
+
+  <div slot="fixed" class="logo">
+    <h1>LOGO</h1>
+  </div>
+
+  <ion-button #plus slot="fixed" #add class="plus" color="main">
+    <img src={{icon}} >
+  </ion-button>
+
+   
+  <ion-back-button slot="fixed" text="" defaultHref="/delivery">    
+  </ion-back-button>  
+  
+  <ion-badge class="badge" slot="fixed">2</ion-badge>
+
+  <ion-toolbar class="header">
+    <ion-button slot="end" color="white">
+      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+
+  <ion-item lines="none">
+      <img src="../../assets/page/home/e-katalog.png">
+      <ion-label>      
+        <h3>e-katalog</h3>
+        <p>Electronics store</p>
+        <p>₸₸₸ • Distance: 457м • ★7.5</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="button">
+          <ion-icon name="heart-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    <div class="paragraph">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+
+  <ion-toolbar>    
+    <ion-slides [options]="category">
+      <ion-slide><h6>Food</h6></ion-slide>
+      <ion-slide><h6>Clothes</h6></ion-slide>
+      <ion-slide><h6>Electronics</h6> </ion-slide>
+      <ion-slide><h6>House</h6></ion-slide>
+      <ion-slide><h6>Transport</h6> </ion-slide>
+      <ion-slide><h6>Games</h6></ion-slide>
+      <ion-slide><h6>Sport</h6></ion-slide>
+    </ion-slides>
+  </ion-toolbar>
+  
+
+  <ion-toolbar class="buttons">
+    <ion-buttons slot="start">
+      <div class="deliver">
+        <ion-button >
+            <img src="../../assets/icon/motocycle.svg">
+        </ion-button>
+        <ion-button>
+          <img src="../../assets/icon/delivery.svg">
+        </ion-button>
+      </div>
+        
+      <ion-button fill="outline" color="button">
+        <img src="../../assets/icon/celender.svg">
+      </ion-button>
+      <ion-button fill="outline" color="button"> 
+        <img src="../../assets/icon/map.svg">
+      </ion-button>
+    </ion-buttons >
+
+    <ion-buttons slot="end">
+      <ion-button fill="outline" color="button">
+        <img src="../../assets/icon/tiletype.svg">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card routerLink='/product'>
+          <img src="../../assets/page/shop/samsung.png">
+        </ion-card> 
+       <h5>Samsung Galaxy S20 FE</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>128GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end" >
+            <ion-button fill="solid" color="main" (click)="play()" [disabled]="isDisabled">
+              <ion-icon name={{mark}}></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item>
+        <img  class="favourite" src={{Arr[0].icon}} (click)="select(Arr[0])">
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/shop/xiomi.png">
+        </ion-card> 
+       <h5>Xiaomi Redmi 9C</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>84GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item>
+        <img  class="favourite" src={{Arr[1].icon}} (click)="select(Arr[1])">
+      </ion-col>      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/shop/google.png">
+        </ion-card> 
+       <h5>Google Pixel 4 XL 64 ГБ</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>256GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item>
+        <img  class="favourite" src={{Arr[2].icon}} (click)="select(Arr[2])">
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/shop/huawei.png">
+        </ion-card> 
+       <h5>Huawei Honor 30 Pro</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>256GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item>
+        <img  class="favourite" src={{Arr[3].icon}} (click)="select(Arr[3])">
+      </ion-col>      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/shop/samsung.png">
+        </ion-card> 
+       <h5>Samsung Galaxy S20 FE</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>128GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end" >
+            <ion-button fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item> -->
+        <img  class="favourite" src={{Arr[4].icon}} (click)="select(Arr[4])">
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/shop/xiomi.png">
+        </ion-card> 
+       <h5>Xiaomi Redmi 9C</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>84GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item>
+        <img  class="favourite" src={{Arr[5].icon}} (click)="select(Arr[5])">
+      </ion-col>      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/shop/google.png">
+        </ion-card> 
+       <h5>Google Pixel 4 XL 64 ГБ</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>256GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item>
+        <img  class="favourite" src={{Arr[6].icon}} (click)="select(Arr[6])">
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="../../assets/page/shop/huawei.png">
+        </ion-card> 
+       <h5>Huawei Honor 30 Pro</h5>  
+       <ion-item lines="none">        
+          <ion-label>
+            <p>256GB</p>
+            <h6>2 500₸</h6>          
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button fill="solid" color="main">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>              
+        </ion-item>
+        <img  class="favourite" src={{Arr[7].icon}} (click)="select(Arr[7])">
+      </ion-col>      
+    </ion-row>
+    
+   
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,26 @@
+ion-avatar {
+    margin-right: 10px;
+}
+
+ion-list {
+    padding: 0 15px;
+    background: #00D173; 
+}
+ion-icon, p{
+    margin-right: 10px;
+}
+
+  
+ion-item {
+    --background: #00D173; 
+    color: white;  
+    h3 {
+        margin-right: 12px;
+    }
+}
+.button{
+    width: max-content;
+    border-radius: 10px;
+    --border-color: black;
+}
+
